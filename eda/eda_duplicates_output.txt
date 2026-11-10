@@ -1,0 +1,27 @@
+
+Exact duplicates (MD5): images 486, groups 181
+ groups from more than one tweet 175
+ groups across splits 82
+ groups across events 35
+ groups with different image labels 22
+
+Near duplicates (aHash): images 1833, groups 644
+ groups from more than one tweet 630
+ groups across splits 299
+ groups across events 174
+ groups with different image labels 188
+ of which flat images (uniform hash or contrast under 5) 4
+ largest aHash groups [37, 35, 33, 32, 22]
+
+leakage candidates (aHash, different tweets, across splits): 1083 images in 299 groups
+ test images with a near copy in train or dev 226
+
+Near duplicates confirmed by 16x16 dHash: 669 images in 259 groups
+ groups across splits 119
+ groups with different image labels 37
+ test images with a confirmed copy in train or dev 90
+ group of 34 data_image/hurricane_harvey/18_9_2017/909919782627086336_0.jpg
+ group of 33 data_image/california_wildfires/16_10_2017/919912231952928768_0.png
+ group of 9 data_image/hurricane_irma/7_9_2017/905733278732349441_0.jpg
+ group of 8 data_image/srilanka_floods/5_6_2017/871857585292488707_0.jpg
+ group of 7 data_image/hurricane_harvey/14_9_2017/908308470943944705_0.jpg

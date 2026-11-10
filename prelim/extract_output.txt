@@ -1,0 +1,2 @@
+images 18082 in 145 s
+tweets 16058 in 73 s

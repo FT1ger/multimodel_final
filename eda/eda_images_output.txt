@@ -1,0 +1,54 @@
+images 18082 readable 18082
+
+format
+format
+JPEG    17888
+PNG       194
+
+mode
+mode
+RGB     17890
+RGBA      188
+P           3
+L           1
+
+size summary
+         width   height      bytes
+count  18082.0  18082.0    18082.0
+mean     867.0    656.0   106061.0
+std      286.0    281.0    89398.0
+min       18.0     16.0      266.0
+25%      640.0    440.0    48772.0
+50%      900.0    636.0    90686.0
+75%     1200.0    813.0   144578.0
+max     1200.0   1200.0  3009182.0
+
+shorter side under 224: 761
+
+sharpness, brightness, contrast
+       sharpness  brightness  contrast
+count    18082.0     18082.0   18082.0
+mean      2141.8       121.4      59.0
+std       3219.8        45.4      15.0
+min          0.0         0.0       0.0
+25%        685.8        92.5      49.6
+50%       1387.7       114.9      59.5
+75%       2628.4       141.9      68.4
+max      76474.2       255.0     124.2
+
+sharpness under 100 (likely blurry): 387
+
+sharpness median by class
+label_image
+affected_individuals                      1058.0
+infrastructure_and_utility_damage         1624.0
+injured_or_dead_people                     995.0
+missing_or_found_people                    928.0
+not_humanitarian                          1135.0
+other_relevant_information                2283.0
+rescue_volunteering_or_donation_effort    1394.0
+vehicle_damage                            1504.0
+
+images sharing an average hash: 1833 groups: 644
+hash groups spread over more than one split: 299
+hash groups with more than one image label: 188

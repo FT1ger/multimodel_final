@@ -1,0 +1,4 @@
+confidence,n,errors
+below 0.5,200,82
+0.5 to 0.8,479,51
+above 0.8,276,5

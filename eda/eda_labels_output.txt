@@ -1,0 +1,146 @@
+
+=== Rows, unique tweets and images per split ===
+               task split  rows  tweets  images
+        informative train 13608   11584   13608
+        informative   dev  2237    2237    2237
+        informative  test  2237    2237    2237
+       humanitarian train 13608   11584   13608
+       humanitarian   dev  2237    2237    2237
+       humanitarian  test  2237    2237    2237
+             damage train  2468    2286    2468
+             damage   dev   529     519     529
+             damage  test   529     523     529
+ informative agreed train  9601    8293    9601
+ informative agreed   dev  1573    1573    1573
+ informative agreed  test  1534    1534    1534
+humanitarian agreed train  6126    5263    6126
+humanitarian agreed   dev   998     998     998
+humanitarian agreed  test   955     955     955
+
+=== Images per tweet (informative, all splits) ===
+1    14913
+2      570
+3      271
+4      304
+Name: count, dtype: int64
+
+=== Tweets that appear in more than one split ===
+informative 0
+humanitarian 0
+damage 120
+informative 0
+humanitarian 0
+
+=== Text label vs image label agreement (all data) ===
+informative agreement 0.703
+ label column equals text label 0.85 equals image label 0.853
+humanitarian agreement 0.447
+ label column equals text label 0.722 equals image label 0.725
+
+=== Agreement by event (humanitarian) ===
+                      rows  agree
+event_name                       
+california_wildfires  1589  0.322
+hurricane_harvey      4434  0.441
+hurricane_irma        4504  0.410
+hurricane_maria       4556  0.489
+iraq_iran_earthquake   597  0.380
+mexico_earthquake     1380  0.424
+srilanka_floods       1022  0.710
+
+=== Humanitarian: text label vs image label (counts) ===
+label_image                             affected_individuals  infrastructure_and_utility_damage  injured_or_dead_people  missing_or_found_people  not_humanitarian  other_relevant_information  rescue_volunteering_or_donation_effort  vehicle_damage    All
+label_text                                                                                                                                                                                                                                                   
+affected_individuals                                      62                                154                       6                        0               181                          38                                      63              14    518
+infrastructure_and_utility_damage                         53                                751                       7                        0               326                         143                                     102              48   1430
+injured_or_dead_people                                    29                                190                      25                        1               115                          54                                      92              27    533
+missing_or_found_people                                    2                                  7                       2                        2                15                           4                                       9               0     41
+not_humanitarian                                          60                                416                       7                        1              4277                         269                                     165              25   5220
+other_relevant_information                               232                               1547                      41                        5              2189                        1753                                     609             129   6505
+rescue_volunteering_or_donation_effort                   123                                538                      22                        5              1594                         266                                    1187              39   3774
+vehicle_damage                                             1                                 21                       0                        0                11                           2                                       4              22     61
+All                                                      562                               3624                     110                       14              8708                        2529                                    2231             304  18082
+
+=== Class distribution per split ===
+
+informative
+split            train   dev  test
+label                             
+informative       8341  1407  1373
+not_informative   5267   830   864
+
+humanitarian
+split                                   train  dev  test
+label                                                   
+affected_individuals                      424   71    86
+infrastructure_and_utility_damage        1905  251   319
+injured_or_dead_people                    244   42    41
+missing_or_found_people                    24    4     5
+not_humanitarian                         5260  889   849
+other_relevant_information               3294  605   578
+rescue_volunteering_or_donation_effort   2323  353   340
+vehicle_damage                            134   22    19
+
+damage
+split                train  dev  test
+label                                
+little_or_no_damage    333   71    71
+mild_damage            587  126   126
+severe_damage         1548  332   332
+
+informative agreed
+split            train   dev  test
+label                             
+informative       6345  1056  1030
+not_informative   3256   517   504
+
+humanitarian agreed
+split                                   train  dev  test
+label                                                   
+affected_individuals                       71    9     9
+infrastructure_and_utility_damage         612   80    81
+not_humanitarian                         3252  521   504
+other_relevant_information               1279  239   235
+rescue_volunteering_or_donation_effort    912  149   126
+
+=== Events per split (humanitarian agreed) ===
+split                 train  dev  test
+event_name                            
+california_wildfires    362   71    78
+hurricane_harvey       1483  223   248
+hurricane_irma         1392  241   215
+hurricane_maria        1724  272   232
+iraq_iran_earthquake    175   29    23
+mexico_earthquake       428   78    79
+srilanka_floods         562   84    80
+
+=== Class by event (humanitarian agreed, share of event rows) ===
+label                 affected_individuals  infrastructure_and_utility_damage  not_humanitarian  other_relevant_information  rescue_volunteering_or_donation_effort
+event_name                                                                                                                                                         
+california_wildfires                  0.02                               0.16              0.53                        0.19                                    0.10
+hurricane_harvey                      0.01                               0.12              0.46                        0.20                                    0.21
+hurricane_irma                        0.00                               0.11              0.42                        0.35                                    0.12
+hurricane_maria                       0.00                               0.08              0.58                        0.21                                    0.12
+iraq_iran_earthquake                  0.12                               0.10              0.45                        0.22                                    0.11
+mexico_earthquake                     0.02                               0.06              0.53                        0.11                                    0.28
+srilanka_floods                       0.01                               0.02              0.87                        0.02                                    0.08
+
+=== Text properties (unique tweets, informative all) ===
+tweets 16058
+words mean 13.7
+words median 14.0
+words max 26
+retweets (RT @) 2184
+with URL 16057
+with @mention 4387
+with hashtag 6271
+mojibake (â€ or Ã) 784
+non ASCII letters 3942
+duplicate texts 0
+
+=== Duplicate texts after removing URLs and RT prefix ===
+tweets sharing a cleaned text 18
+cleaned texts spread over more than one split 5
+
+=== Damage task overlap with humanitarian images ===
+damage images also in humanitarian 3525 of 3526

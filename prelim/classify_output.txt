@@ -1,0 +1,31 @@
+
+=== informative (agreed labels) train 9601, dev 1573, test 1534 ===
+model     setting  train mF1  dev mF1  test acc  test mF1  test wF1
+image       0.001      0.852    0.806     0.842     0.826     0.844
+ text       0.001      0.833    0.819     0.845     0.830     0.847
+early       0.001      0.916    0.876     0.901     0.890     0.902
+ late w_image=0.5      0.906    0.885     0.900     0.889     0.901
+early minus text test macro-F1, 95% bootstrap interval [0.041, 0.078]
+late minus text test macro-F1, 95% bootstrap interval [0.039, 0.076]
+
+per-class test F1
+                 image  text  early   late
+informative      0.878  0.88  0.925  0.925
+not_informative  0.773  0.78  0.854  0.853
+
+=== humanitarian (agreed labels) train 6126, dev 998, test 955 ===
+model     setting  train mF1  dev mF1  test acc  test mF1  test wF1
+image       0.001      0.792    0.626     0.781     0.702     0.784
+ text       0.001      0.760    0.648     0.758     0.677     0.764
+early        0.01      0.981    0.781     0.862     0.794     0.864
+ late w_image=0.5      0.877    0.753     0.859     0.802     0.861
+early minus text test macro-F1, 95% bootstrap interval [0.071, 0.164]
+late minus text test macro-F1, 95% bootstrap interval [0.087, 0.166]
+
+per-class test F1
+                                        image   text  early   late
+affected_individuals                    0.452  0.438  0.538  0.615
+infrastructure_and_utility_damage       0.775  0.687  0.902  0.864
+not_humanitarian                        0.813  0.801  0.887  0.882
+other_relevant_information              0.803  0.753  0.854  0.861
+rescue_volunteering_or_donation_effort  0.667  0.706  0.789  0.789
